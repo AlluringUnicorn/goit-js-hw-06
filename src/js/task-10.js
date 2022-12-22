@@ -23,8 +23,8 @@ function createBoxes() {
   for (let i = 1; i <= amount; i += 1) {
     const divEl = document.createElement(`div`);
 
-    divEl.style.width = 30 + "px";
-    divEl.style.height = 30 + "px";
+    divEl.style.width = 20 + i * 10 + "px";
+    divEl.style.height = 20 + i * 10 + "px";
     divEl.style.backgroundColor = getRandomHexColor();
 
     divBoxes.append(divEl);

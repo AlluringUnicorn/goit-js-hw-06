@@ -1,4 +1,3 @@
-
 // Напиши скрипт управління формою логіна.
 
 // Обробка відправлення форми form.login-form повинна відбуватися відповідно до події submit.
@@ -7,4 +6,27 @@
 // Якщо користувач заповнив усі поля і відправив форму, збери значення полів в об'єкт, де ім'я поля буде ім'ям властивості, а значення поля - значенням властивості. Для доступу до елементів форми використовуй властивість elements.
 // Виведи об'єкт із введеними даними в консоль і очисти значення полів форми методом reset.
 
+const formEl = document.querySelector(`.login-form`);
+// console.log(formEl);
 
+function onFormSubmit(event) {
+  event.preventDefault();
+
+  const email = event.currentTarget.elements.email.value;
+  const password = event.currentTarget.elements.password.value;
+
+  if (email === "" || password === "") {
+    alert(`All fields must be filled in!`);
+  } else {
+    const data = {
+      email,
+      password,
+    };
+
+    console.log(data);
+
+    formEl.reset();
+  }
+}
+
+formEl.addEventListener(`submit`, onFormSubmit);

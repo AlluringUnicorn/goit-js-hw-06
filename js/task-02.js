@@ -8,32 +8,33 @@
 
 
 const ingredients = [
-  'Potatoes',
-  'Mushrooms',
-  'Garlic',
-  'Tomatos',
-  'Herbs',
-  'Condiments',
-];
-
-
-const elements = ingredients.map(ingredient => {
-  const liElement = document.createElement(`li`);
-
-  liElement.textContent = `${ingredient}`;
-  liElement.classList.add(`item`);
-
-  return liElement;
-})
-
-// console.log(elements);
-
-const ingredientsList = document.querySelector(`#ingredients`);
-
-ingredientsList.append(...elements);
-
-console.log(ingredientsList);
-
-
-
-
+    'Potatoes',
+    'Mushrooms',
+    'Garlic',
+    'Tomatos',
+    'Herbs',
+    'Condiments',
+  ];
+  
+  
+  const elements = ingredients.map(ingredient => {
+    const liElement = document.createElement(`li`);
+  
+    liElement.textContent = `${ingredient}`;
+    liElement.classList.add(`item`);
+  
+    return liElement;
+  })
+  
+  // console.log(elements);
+  
+  const ingredientsList = document.querySelector(`#ingredients`);
+  
+  ingredientsList.append(...elements);
+  
+  console.log(ingredientsList);
+  
+  
+  
+  
+  
